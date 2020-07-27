@@ -28,20 +28,23 @@
             </tr>
           </thead>
 
-          <?php if ( !isset( $database['error'] ) ) { ?>
+
+
+          <tbody>
 
              <?php foreach ($database as $stanza) { ?>
+             
                 <tr>
-                  <td>ID: <?php echo $stanza['id']; ?></td>
-                  <td>Room Number: <?php echo $stanza['room_number']; ?></td>
-                  <td>Floor: <?php echo $stanza['floor']; ?></td>
-                  <td>Beds: <?php echo $stanza['beds']; ?></td>
+                  <td><?php echo $stanza['id']; ?></td>
+                  <td><?php echo $stanza['room_number']; ?></td>
+                  <td><?php echo $stanza['floor']; ?></td>
+                  <td><?php echo $stanza['beds']; ?></td>
                 </tr>  
 
              <?php } ?>
 
-          <?php } ?>
-
+          </tbody>
+  
         </table>
         <!-- fine lista stanze -->
 
