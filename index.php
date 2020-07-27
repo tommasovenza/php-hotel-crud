@@ -6,9 +6,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB test</title>
+    <title>Boolean Hotel</title>
+
+    <link rel="stylesheet" href="dist/app.css">
 </head>
 <body>
+
+  <header>
+    <h1>Boolean Hotel</h1>
+  </header>
+
+  <main>
+
+        <!-- lista stanze -->
+        <table class="rooms-list">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Numero stanza</th>
+              <th>Piano </th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td>4</td>
+            <td>96</td>
+            <td>88</td>
+          </tr>  
+
+          <tr>
+            <td>4</td>
+            <td>96</td>
+            <td>88</td>
+          </tr> 
+
+          <tr>
+            <td>4</td>
+            <td>96</td>
+            <td>88</td>
+          </tr> 
+
+        </table>
+        <!-- fine lista stanze -->
+
+  </main>
+
 
   <?php if ( !isset( $database['error'] ) ) { ?>
 
