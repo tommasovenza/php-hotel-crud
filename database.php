@@ -2,7 +2,7 @@
     $servername = 'localhost';
     $username = 'root';
     $password = 'root';
-    $dbname = 'db_hotel';
+    $dbname = 'nuovo_db_hotel';
 
     // connect
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -39,7 +39,7 @@
     } 
 
 
-
+    $conn->close();
 
 
 
