@@ -1,8 +1,5 @@
 <?php 
-    $servername = 'localhost';
-    $username = 'root';
-    $password = 'root';
-    $dbname = 'nuovo_db_hotel';
+include __DIR__ . '/env.php';  
 
     // connect
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,7 +7,7 @@
     // check connection
     if($conn && $conn->connect_error) {
         
-        die("Connection failed: " . $conn->connect_error);
+        die("CONNECTION FAILED: " . $conn->connect_error);
 
     } else {
 
@@ -31,7 +28,7 @@
 
         } else {
             
-             die('query error!');   
+             die('QUERY ERROR!');   
         }
         // FINE ESECUZIONE PROGRAMMA
     } 

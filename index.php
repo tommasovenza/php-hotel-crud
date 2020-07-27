@@ -1,19 +1,5 @@
 <?php include __DIR__ . '/database.php'; ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boolean Hotel</title>
-
-    <link rel="stylesheet" href="dist/app.css">
-</head>
-<body>
-
-  <header>
-    <h1>Boolean Hotel</h1>
-  </header>
+<?php include __DIR__ . '/partials/header.php'; ?>
 
   <main>
 
@@ -24,21 +10,19 @@
               <th>ID</th>
               <th>Numero stanza</th>
               <th>Piano </th>
-              <th>Posti Letto</th>
+              <th>Vista</th>
             </tr>
           </thead>
-
-
 
           <tbody>
 
              <?php foreach ($database as $stanza) { ?>
-             
+
                 <tr>
                   <td><?php echo $stanza['id']; ?></td>
                   <td><?php echo $stanza['room_number']; ?></td>
                   <td><?php echo $stanza['floor']; ?></td>
-                  <td><?php echo $stanza['beds']; ?></td>
+                  <td><a href="">View</a></td>
                 </tr>  
 
              <?php } ?>
