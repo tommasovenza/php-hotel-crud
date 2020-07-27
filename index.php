@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/database.php'; ?>
+<?php include __DIR__ . '/server.php'; ?>
 <?php include __DIR__ . '/partials/header.php'; ?>
 
   <main>
@@ -22,7 +22,7 @@
                   <td><?php echo $stanza['id']; ?></td>
                   <td><?php echo $stanza['room_number']; ?></td>
                   <td><?php echo $stanza['floor']; ?></td>
-                  <td><a href="">View</a></td>
+                  <td><a href="<?php echo $base_path . '/show/show.php?id=' .$stanza['id']; ?>">View</a></td>
                 </tr>  
 
              <?php } ?>
@@ -35,13 +35,6 @@
   </main>
 
 
-  
-
-
-        
-
-
-    
     
 </body>
 </html>
