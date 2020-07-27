@@ -37,7 +37,6 @@
         }
         // FINE ESECUZIONE PROGRAMMA
     } 
-
     $conn->close();
 
 

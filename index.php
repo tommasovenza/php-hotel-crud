@@ -1,5 +1,4 @@
 <?php include __DIR__ . '/database.php'; ?>
-<?php // var_dump($database); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,26 +24,23 @@
               <th>ID</th>
               <th>Numero stanza</th>
               <th>Piano </th>
+              <th>Posti Letto</th>
             </tr>
           </thead>
 
-          <tr>
-            <td>4</td>
-            <td>96</td>
-            <td>88</td>
-          </tr>  
+          <?php if ( !isset( $database['error'] ) ) { ?>
 
-          <tr>
-            <td>4</td>
-            <td>96</td>
-            <td>88</td>
-          </tr> 
+             <?php foreach ($database as $stanza) { ?>
+                <tr>
+                  <td>ID: <?php echo $stanza['id']; ?></td>
+                  <td>Room Number: <?php echo $stanza['room_number']; ?></td>
+                  <td>Floor: <?php echo $stanza['floor']; ?></td>
+                  <td>Beds: <?php echo $stanza['beds']; ?></td>
+                </tr>  
 
-          <tr>
-            <td>4</td>
-            <td>96</td>
-            <td>88</td>
-          </tr> 
+             <?php } ?>
+
+          <?php } ?>
 
         </table>
         <!-- fine lista stanze -->
@@ -52,22 +48,13 @@
   </main>
 
 
-  <?php if ( !isset( $database['error'] ) ) { ?>
+  
 
-    <ul>
-        <?php foreach ($database as $stanza) { ?>
-            
-            <li> 
-                <div>ID: <?php echo $stanza['id']; ?></div>
-                <div>Room Number: <?php echo $stanza['room_number']; ?></div>   
-                <div>Floor: <?php echo $stanza['floor']; ?></div>
-                <div>Beds: <?php echo $stanza['beds']; ?></div>
-            </li>
 
-        <?php } ?>
-    </ul>
+        
 
-  <?php } ?>
+
+    
     
 </body>
 </html>
