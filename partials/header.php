@@ -13,6 +13,7 @@
 <body>
 
   <header>
+  
     <h1>Boolean Hotel</h1>
 
     <nav>
