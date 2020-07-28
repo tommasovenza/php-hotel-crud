@@ -27,9 +27,14 @@
                   <td><?php echo $stanza['room_number']; ?></td>
                   <td><?php echo $stanza['floor']; ?></td>
                   <td>
-                    <a href="<?php echo $base_path . '/show/show.php?id=' .$stanza['id']; ?>">View</a>
+                    <a href="<?php echo $base_path . '/show/show.php?id=' . $stanza['id']; ?>">View</a>
 
-                    <a href="<?php echo $base_path . '/update/edit.php?id=' .$stanza['id']; ?>">Update</a>
+                    <a href="<?php echo $base_path . '/update/edit.php?id=' . $stanza['id']; ?>">Update</a>
+
+                    <form action="<?php echo $base_path . '/delete/delete.php'; ?>" method="post">
+                      <input type="hidden" name="formid" value="<?php echo $stanza['id'] ?>">
+                      <input type="submit" value="Delete">
+                    </form>
                   </td>
                 </tr>  
 
